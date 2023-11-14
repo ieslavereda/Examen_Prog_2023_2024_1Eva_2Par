@@ -1,13 +1,8 @@
 package es.ieslavereda;
 
 public class Exercise01 {
-    public static void main(String[] args) {
-        //to be tested in JUnit
-        System.out.println(count55("555"));
-        System.out.println(count55itera("55abc55"));
-        System.out.println(strCount("catcowcat", "cat"));
-        System.out.println(strCountItera("iiiijj", "i"));
-    }
+
+    //to be tested with JUnit --> Exercise01Test
 
     public static int count55(String str) {
         if(str.length() <= 1)
