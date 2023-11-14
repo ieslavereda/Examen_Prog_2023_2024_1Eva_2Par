@@ -48,29 +48,39 @@ class Exercise01Test {
     }
 
     @Test
-    void array73Test() {
-        assertEquals(1,array73(new int[]{1, 2, 73}, 0));
-        assertEquals(2,array73(new int[]{73, 73}, 0));
-        assertEquals(0,array73(new int[]{1, 2, 3, 4}, 0));
-        assertEquals(3,array73(new int[]{1, 73, 3, 73, 73}, 0));
-        assertEquals(1,array73(new int[]{73}, 0));
-        assertEquals(0,array73(new int[]{7}, 0));
-        assertEquals(0,array73(new int[]{}, 0));
-        assertEquals(2,array73(new int[]{73, 2, 3, 4, 73, 5}, 0));
-        assertEquals(2,array73(new int[]{73, 5, 73}, 0));
+    void strCountTest() {
+        assertEquals(2,strCount("catcowcat", "cat"));
+        assertEquals(1,strCount("catcowcat", "cow"));
+        assertEquals(0,strCount("catcowcat", "dog"));
+        assertEquals(2,strCount("cacatcowcat", "cat"));
+        assertEquals(2,strCount("xyx", "x"));
+        assertEquals(4,strCount("iiiijj", "i"));
+        assertEquals(2,strCount("iiiijj", "ii"));
+        assertEquals(1,strCount("iiiijj", "iii"));
+        assertEquals(2,strCount("iiiijj", "j"));
+        assertEquals(1,strCount("iiiijj", "jj"));
+        assertEquals(4,strCount("aaabababab", "ab"));
+        assertEquals(1,strCount("aaabababab", "aa"));
+        assertEquals(6,strCount("aaabababab", "a"));
+        assertEquals(4,strCount("aaabababab", "b"));
     }
 
     @Test
-    void array73IteraTest() {
-        assertEquals(1,array73itera(new int[]{1, 2, 73}, 0));
-        assertEquals(2,array73itera(new int[]{73, 73}, 0));
-        assertEquals(0,array73itera(new int[]{1, 2, 3, 4}, 0));
-        assertEquals(3,array73itera(new int[]{1, 73, 3, 73, 73}, 0));
-        assertEquals(1,array73itera(new int[]{73}, 0));
-        assertEquals(0,array73itera(new int[]{7}, 0));
-        assertEquals(0,array73itera(new int[]{}, 0));
-        assertEquals(2,array73itera(new int[]{73, 2, 3, 4, 73, 5}, 0));
-        assertEquals(2,array73itera(new int[]{73, 5, 73}, 0));
+    void strCountIteraTest() {
+        assertEquals(2,strCountItera("catcowcat", "cat"));
+        assertEquals(1,strCountItera("catcowcat", "cow"));
+        assertEquals(0,strCountItera("catcowcat", "dog"));
+        assertEquals(2,strCountItera("cacatcowcat", "cat"));
+        assertEquals(2,strCountItera("xyx", "x"));
+        assertEquals(4,strCountItera("iiiijj", "i"));
+        assertEquals(2,strCountItera("iiiijj", "ii"));
+        assertEquals(1,strCountItera("iiiijj", "iii"));
+        assertEquals(2,strCountItera("iiiijj", "j"));
+        assertEquals(1,strCountItera("iiiijj", "jj"));
+        assertEquals(4,strCountItera("aaabababab", "ab"));
+        assertEquals(1,strCountItera("aaabababab", "aa"));
+        assertEquals(6,strCountItera("aaabababab", "a"));
+        assertEquals(4,strCountItera("aaabababab", "b"));
     }
 
 }

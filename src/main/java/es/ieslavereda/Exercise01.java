@@ -5,16 +5,16 @@ public class Exercise01 {
         //to be tested in JUnit
         System.out.println(count55("555"));
         System.out.println(count55itera("55abc55"));
-        System.out.println(array73(new int[]{1, 2, 73}, 0));
-        System.out.println(array73itera(new int[]{1, 2, 73}, 0));
+        System.out.println(strCount("catcowcat", "cat"));
+        System.out.println(strCountItera("iiiijj", "i"));
     }
 
     public static int count55(String str) {
         if(str.length() <= 1)
             return 0;
-        if(str.substring(0,2).equals("55"))
+        if(str.startsWith("55"))
             return 1+ count55(str.substring(2));
-        return 0+ count55(str.substring(1));
+        return count55(str.substring(1));
     }
 
     public static int count55itera(String str) {
@@ -28,22 +28,22 @@ public class Exercise01 {
         return sum;
     }
 
-    public static int array73(int[] nums, int index) {
-        if (index>=nums.length)
+    public static int strCount(String str, String sub) {
+        if(str.length()<sub.length())
             return 0;
-
-        if (nums[index]==73)
-            return 1+array73(nums,++index);
-
-        return array73(nums,++index);
-
+        if(str.substring(0,sub.length()).equals(sub))
+            return 1 + strCount(str.substring(sub.length()),sub);
+        return strCount(str.substring(1),sub);
     }
 
-    public static int array73itera(int[] nums, int index) {
+
+    public static int strCountItera(String str, String sub) {
         int sum=0;
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i]==73)
+        for (int i = 0; i <= str.length()-sub.length(); i++) {
+            if(str.substring(i,i+sub.length()).equals(sub)){
                 sum++;
+                i=i+sub.length()-1;
+            }
         }
         return sum;
     }
