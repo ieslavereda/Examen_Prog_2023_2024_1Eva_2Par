@@ -59,5 +59,4 @@ public class Exercise01 {
         return numeroBinario;
     }
 
-
 }
