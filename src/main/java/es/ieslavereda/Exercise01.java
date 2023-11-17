@@ -43,5 +43,21 @@ public class Exercise01 {
         return sum;
     }
 
+    public static String binarioRecur(int n) {
+        if(n==0) return "";
+        return binarioRecur(n/2)  + n%2 ;
+    }
+
+    public static String binarioIter(int n){
+        String numeroBinario="";
+
+        do{
+            numeroBinario = n%2 + numeroBinario;
+            n/=2;
+        }while (n>0);
+
+        return numeroBinario;
+    }
+
 
 }

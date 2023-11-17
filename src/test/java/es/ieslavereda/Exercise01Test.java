@@ -83,4 +83,20 @@ class Exercise01Test {
         assertEquals(4,strCountItera("aaabababab", "b"));
     }
 
+    @Test
+    void binarioIterTest(){
+        assertEquals("1010",binarioIter(10));
+        assertEquals("111",binarioIter(7));
+        assertEquals("1111",binarioIter(15));
+        assertEquals("100",binarioIter(4));
+    }
+
+    @Test
+    void binarioRecurTest(){
+        assertEquals("1010",binarioRecur(10));
+        assertEquals("111",binarioRecur(7));
+        assertEquals("1111",binarioRecur(15));
+        assertEquals("100",binarioRecur(4));
+    }
+
 }

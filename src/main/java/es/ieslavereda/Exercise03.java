@@ -10,14 +10,12 @@ public class Exercise03 {
         showSequence(c);
     }
 
-
     public static void showSequence(char character){
         for(int c=character;c<='z';c++){
             System.out.print((char)(c + ('A'-'a')*(c%2))+" ");
         }
         System.out.println();
     }
-
 
     public static char getChar(String text){
 
